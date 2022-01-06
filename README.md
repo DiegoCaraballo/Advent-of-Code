@@ -13,3 +13,6 @@ The solutions will be written in **Python** language
     - **input.txt**: "puzzle input" - Text with real values for the challenge
     - **script1.py**: Solution to the first challenge
     - **script2.py**: Solution to the second challenge
+
+## TODO
+- [ ] Maybe collaborate on other programming languages

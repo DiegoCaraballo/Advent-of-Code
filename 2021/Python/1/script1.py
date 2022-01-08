@@ -1,16 +1,24 @@
 # --- Day 1: Sonar Sweep ---
 # https://adventofcode.com/2021/day/1
+import os
 
-def count_measurement():
-    
+def file_to_list(file):
+
     # Open file with inputs and create a list
-    with open('input.txt') as f:
-        measurement_list = list(map(int, f.read().splitlines()))
+    with open(file) as f:
+        report_list = list(map(int, f.read().splitlines()))
+        
+    return report_list
+
+def count_measurement(report):
         
     count = 0
-    for idx, measurement in enumerate(measurement_list):
-        if idx != 0 and measurement > measurement_list[idx-1]:
+    for idx, measurement in enumerate(report):
+        if idx != 0 and measurement > report[idx-1]:
             count += 1
     return count
 
-print(count_measurement())
+# Test Script
+if __name__ == '__main__':
+    measurement_list = file_to_list('input.txt')
+    print(count_measurement(measurement_list))
